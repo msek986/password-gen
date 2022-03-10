@@ -14,7 +14,6 @@ const randomFunc = {
   number: getRandomNumber,
   symbol: getRandomSymbol
 };
-// Generate Event Listen
 
 generateEl.addEventListener("click", () => {
   const length = +lengthEl.value; //+ ga pretvara u broj
@@ -36,7 +35,6 @@ generateEl.addEventListener("click", () => {
   }
 });
 
-// Copy password to clipboard
 clipboardEl.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
   const password = resultEl.innerText;
@@ -52,7 +50,6 @@ clipboardEl.addEventListener("click", () => {
   alert("Šifra kopirana u memoriju.");
 });
 
-// Generate password function
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = "";
 
@@ -83,9 +80,6 @@ function generatePassword(lower, upper, number, symbol, length) {
 
   return finalPassword;
 }
-
-console.log(getRandomUpper());
-// Generator functions
 
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
